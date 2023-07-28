@@ -4,13 +4,13 @@
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
-updates:
+updates: ./github
   - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
+    directory: "./github"
+    schedule: dependency 
+      interval: "daily"
 
   - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
+    directory: "updates#1/*"
+    schedule: action analysis 
       interval: "weekly"
